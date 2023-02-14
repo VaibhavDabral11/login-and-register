@@ -25,7 +25,7 @@ app.get("/register", (req, res) => {
 app.post('/register', async(req, res) => {
     const { name, email, password } = req.body; // Extract the name, email, and password from the request body
 
-    const hashedPassword = await bcrypt.hash(password, 10); // Hash the password using bcryptjs
+    const hashedPassword = await bcrypt.hash(password, 10); // Hash(password , round (4 from 12(build in value 10 )) )  the password using bcryptjs
 
     // Create a new user using the Prisma client and the hashed password
     const newUser = await prisma.user.create({
