@@ -1,0 +1,13 @@
+html
+  head
+    title Login Form
+  body
+    h1 Login Form
+    form(action="/login", method="post")
+      label(for="email") Email:
+      input(type="email", id="email", name="email")
+
+      label(for="password") Password:
+      input(type="password", id="password", name="password")
+
+      button(type="submit") Login

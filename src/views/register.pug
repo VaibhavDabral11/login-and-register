@@ -1,0 +1,21 @@
+html
+  head
+    title User Registration Form
+  body
+    h1 User Registration Form
+    form(action="/register", method="post")
+    
+      label(for="name") Name:
+      input(type="text", id="name", name="name")
+
+      label(for="email") Email:
+      input(type="email", id="email", name="email")
+
+      label(for="password") Password:
+      input(type="password", id="password", name="password")
+
+      button(type="submit") Register
+
+
+
+
